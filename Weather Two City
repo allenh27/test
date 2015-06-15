@@ -1,0 +1,50 @@
+# V1x API
+
+## get weather in two cities
+
+### GET /weather
+
+Return current weather in two cities
+
+### Parameters
+
+Name : city1
+Description : City1
+
+Name : city2
+Description : City2
+
+### Request
+
+#### Headers
+
+<pre>Host: example.org</pre>
+
+#### Route
+
+<pre>GET /weather?city1=Perth</pre>
+<pre>GET /weather?city2=Melbourne</pre>
+
+#### Query Parameters
+
+<pre>city1: Perth</pre>
+<pre>city2: Melbourne</pre>
+
+#### cURL
+
+<pre class="request">curl &quot;http://sandbox.telstra.orchestrated.io/weather?city1=Perth&quot, city2=Melbourne&quot; -X GET </pre>
+
+### Response
+
+#### Headers
+
+<pre>Content-Type: application/json;charset=utf-8</pre>
+
+#### Status
+
+<pre>200 OK</pre>
+
+#### Body
+
+<pre>{"coord":{"lon":115.83,"lat":-31.93},"sys":{"type":1,"id":8221,"message":0.0216,"country":"AU","sunrise":1433891582,"sunset":1433927949},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01n"}],"base":"stations","main":{"temp":290.39,"pressure":1021,"humidity":52,"temp_min":288.15,"temp_max":292.15},"visibility":10000,"wind":{"speed":5.1,"deg":70},"clouds":{"all":0},"dt":1433942447,"id":2063523,"name":"Perth","cod":200}</pre>
+<pre>{"coord":{"lon":115.83,"lat":-31.93},"sys":{"type":1,"id":8221,"message":0.0216,"country":"AU","sunrise":1433891582,"sunset":1433927949},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01n"}],"base":"stations","main":{"temp":290.39,"pressure":1021,"humidity":52,"temp_min":288.15,"temp_max":292.15},"visibility":10000,"wind":{"speed":5.1,"deg":70},"clouds":{"all":0},"dt":1433942447,"id":2063523,"name":"Melbourne","cod":200}</pre>
